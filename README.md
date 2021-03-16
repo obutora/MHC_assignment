@@ -20,25 +20,26 @@ MHCの課題をするよ
    - 画面上にもopacityの値が小数点第2位で丸められた状態で表示される
    - 名付けて **👨‍🏫opacity slider - おぱすら** である。
 
+***
 
 ## 課題2 ：画面間のデータの受け渡し
  - A画面からB画面にデータを渡す
-   - MaterialPageRouteを使う方法
-   　```
-   　Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) =>
-                            Assignment_2_transition(text: text),
-                      ));
-   　```
-　　こんな感じで、Navigator.of(context).push()に渡してあげる方法。
-　　カンタン。一方通行で良ければこの実装でOK。
-
- - グローバルに宣言したVariableを使う方法
+  ##### MaterialPageRouteを使う方法
+  ```
+  Navigator.of(context).push(MaterialPageRoute(
+      builder: (context) =>
+         Assignment_2_transition(text: text),
+     ));
+  ```
+  - こんな感じで、Navigator.of(context).push()に渡してあげる方法。
+  - カンタン。一方通行で良ければこの実装でOK。
+   ##### グローバルに宣言したVariableを使う方法
   - 一番カンタンな方法だが、どんな場所からも呼び出せてしまうため、バグの温床になる可能性大
   - 基本、使わない。
   - const にして不変にして渡す場合はあるかもしれない。
-
-- riverpodを使って値を渡す場合
+  
+  
+##### riverpodを使って値を渡す場合
   - 実際にはほぼこれしか使わない気がしている。
 
 #### +α リビルド制御 with Riverpod
