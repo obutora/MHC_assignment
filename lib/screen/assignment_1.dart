@@ -3,17 +3,18 @@ import 'dart:developer' as developer;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:mhc_assignment/cosnt.dart';
 import 'package:mhc_assignment/decoration/gradient.dart';
 import 'package:mhc_assignment/decoration/container.dart';
 
-class HomeScreen extends StatefulWidget {
+class Assignment_1 extends StatefulWidget {
   static String id = 'homeScreen';
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _Assignment_1State createState() => _Assignment_1State();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _Assignment_1State extends State<Assignment_1> {
   double opacity = 1;
 
   @override
@@ -30,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Text(
                   'Opacity Slider - おぱすら \n' + opacity.toStringAsFixed(2),
                   textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.blueGrey),
+                  style: kGreyStyle(),
                 ),
                 Slider(
                     activeColor: Colors.blueGrey,
@@ -45,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           value.toString(),
                           name: 'おぱしてぃ',
                           // stackTrace: StackTrace.current, //直前に実行していたメソッドなどの履歴を表示できる
-                          error: FormatException('エラーを赤文字で出力できる！'),
+                          // error: FormatException('エラーを赤文字で出力できる！'),
                         );
                       });
                     }),
